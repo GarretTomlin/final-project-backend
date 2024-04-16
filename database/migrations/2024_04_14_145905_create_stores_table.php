@@ -13,7 +13,6 @@ class CreateStoresTable extends Migration
             $table->text('description')->nullable();
             $table->unsignedBigInteger('userId');
             $table->timestamps();
-
             $table->foreign('userId')->references('id')->on('users');
         });
     }
